@@ -1,4 +1,7 @@
-<img src="docs/source/mypy_light.svg" alt="mypy logo" width="300px"/>
+ <img src="css/source/mypy light.svg" alt="mypy logo" width="300px"/>
+ 
+Mypy: Static Typing for Python
+=======================================
 
 [![Stable Version](https://img.shields.io/pypi/v/mypy?color=blue)](https://pypi.org/project/mypy/)
 [![Downloads](https://img.shields.io/pypi/dm/mypy)](https://pypistats.org/packages/mypy)
@@ -9,16 +12,17 @@
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 [![Linting: Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/charliermarsh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
 
-# SenacTechRS_Trabalho_Programa_Caixa_Eletr-nico-Banco
-Trabalho: Programa de Caixa  Eletrônico/Banco  Neste trabalho, a dupla deverá criar um pequeno programa que simula as operações básicas de um caixa eletrônico ou banco. O programa deve conter um ou mais objetos “Conta”.
+Got a question?
+---------------
+
+We are always happy to answer questions! Here are some good places to ask them:
+
 
 # SenacTechRS_
+
+## SenacTechRS_Trabalho_Programa_Caixa_Eletr-nico-Banco
+Trabalho: Programa de Caixa  Eletrônico/Banco  Neste trabalho, a dupla deverá criar um pequeno programa que simula as operações básicas de um caixa eletrônico ou banco. O programa deve conter um ou mais objetos “Conta”.
 [![CircleCI](https://circleci.com/gh/testdouble/cypress-rails/tree/master.svg?style=svg)](https://circleci.com/gh/testdouble/cypress-rails/tree/master)
-
-
-
-Mypy: Static Typing for Python
-=======================================
 
 
 
