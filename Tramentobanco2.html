@@ -24,5 +24,36 @@
         O bloco de código dentro da função é executado quando a função é chamada. Neste caso, a função solicita ao usuário que insira os dados para criar uma nova conta bancária, cria um objeto Conta com esses dados e o adiciona à lista de contas (self.contas).
         A função não retorna explicitamente nenhum valor, mas realiza a ação de criar uma conta e adicioná-la à lista de contas do sistema bancário.</p>
 
+
+ 
+
+
+        Este código implementa um sistema bancário básico com a capacidade de criar contas, acessar contas existentes, remover contas e exibir detalhes das contas. Além disso, ele inclui a funcionalidade de salvar os dados das contas em um arquivo JSON e carregar esses dados de um arquivo JSON quando o programa é iniciado.
+
+        <p>
+            Detalhes: 
+Classe Conta:
+
+Esta classe representa uma conta bancária.
+Ela possui atributos como nome, sexo, CPF, idade, número da conta e senha.
+O método __str__ é definido para retornar uma representação em string da conta.
+O método to_json() converte os dados da conta em um formato que pode ser serializado em JSON.
+
+Classe SistemaBancario:
+Esta classe representa o sistema bancário.
+Ela mantém uma lista de contas bancárias.
+O método carregar_contas() verifica se um arquivo JSON de contas existe. Se existir, ele carrega os dados das contas do arquivo e as adiciona à lista de contas.
+Se o arquivo não existir, uma mensagem é exibida informando que um novo arquivo será criado.
+O método criar_conta() solicita ao usuário que insira os dados para criar uma nova conta e a adiciona à lista de contas.
+O método acessar_conta() permite que o usuário acesse uma conta existente, fornecendo o número da conta e a senha.
+O método remover_conta() permite que o usuário remova uma conta existente, fornecendo o número da conta.
+O método exibir_detalhes_conta() permite que o usuário veja os detalhes de uma conta existente, fornecendo o número da conta.
+O método salvar_contas_json() salva os dados das contas em um arquivo JSON.
+O método menu() exibe um menu com as opções disponíveis no sistema.
+O método main() é o ponto de entrada do programa, onde o usuário interage com o sistema selecionando opções do menu.
+if __name__ == "__main__": </p>
+
+
+
 </body>
 </html>
