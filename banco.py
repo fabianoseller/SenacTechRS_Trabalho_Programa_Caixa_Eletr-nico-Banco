@@ -1,9 +1,12 @@
 class Conta:
-    def __init__(self, nome, sexo, cpf, idade):
+    def __init__(self, nome, sexo, cpf, idade, senha, numero_da_conta):
         self.nome = nome
         self.sexo = sexo
         self.cpf = cpf
         self.idade = idade
+        self.senha = senha
+        self.numero_da_conta = numero_da_conta
+
 
 def criar_conta():
     nome = str (input('Qual é o seu nome: '))
@@ -13,11 +16,16 @@ def criar_conta():
     cpf = int (input('Digite o seu CPF: '))
     senha = int (input('Digite a sua nova senha: '))
     numero_da_conta = int (input('Digite o numero da conta'))
-    return Conta(nome, sexo, cpf, idade)
+    return Conta(nome, sexo, cpf, idade, senha, numero_da_conta)
 
 def acessar_conta(numero_da_conta, senha):
+    numero_conta = int (input('Digite o numero da conta: '))
+    senha = int (input('Digite sua senha: '))
+    return Conta(numero_da_conta, senha)
 
-def remover_conta(Conta ):
+
+def remover_conta(numero_da_conta, senha ):
+    print(f'Remover Conta')
 
 opção = 0
 while opção != 4:
@@ -32,9 +40,8 @@ while opção != 4:
         print('Conta criada com sucesso!')
 
     elif opção == 2:
-        numero_conta = input('Digite o número da conta: ')
-        senha = input('Digite a sua senha: ')
-        acessar_conta(numero_conta, senha)
+        acessar = acessar_conta()
+        print('Seja bem vindo a Caixa Economica federal! ')
 
     elif opção == 3:
         remover_conta()
