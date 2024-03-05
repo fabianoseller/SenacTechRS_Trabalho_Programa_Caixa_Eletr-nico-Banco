@@ -1,3 +1,8 @@
+
+ 
+Mypy: Static Typing for Python
+=======================================
+
   <div class="topic p-responsive container-lg">
     <div class="d-md-flex gutter-md">
       <div class="col-md-8 col-lg-9" data-hpc>
@@ -5,9 +10,6 @@
     <div class="float-sm-right ml-sm-4 mb-4 text-center">
       <img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/python/python.png" width="100" height="100" alt="python logo">
     </div>
- 
-Mypy: Static Typing for Python
-=======================================
 
 [![Stable Version](https://img.shields.io/pypi/v/mypy?color=blue)](https://pypi.org/project/mypy/)
 [![Downloads](https://img.shields.io/pypi/dm/mypy)](https://pypistats.org/packages/mypy)
