@@ -6,9 +6,27 @@ class Conta:
         self.idade = idade
         self.numero_da_conta = numero_da_conta
         self.senha = senha
+        self.saldo = 0
 
     def __str__(self):
         return f"Nome: {self.nome}, Sexo: {self.sexo}, CPF: {self.cpf}, Idade: {self.idade}, Número da Conta: {self.numero_da_conta}"
+    
+    def ver_saldo(self):
+        print("Saldo: ", self.saldo)
+
+    def sacar(self, valor):
+        if self.saldo >= valor:
+            self.saldo -= valor
+            print('Operação Concluida com sucesso! ' )
+        else:
+            print('Saldo Insuficiente' )
+
+    def depositar(self, valor):
+        if self.saldo <= valor:
+           self.saldo += valor
+           print('Deposito concluido com sucesso! ')    
+        else:
+            print('Erro na operação')    
 
 class SistemaBancario:
     def __init__(self):
@@ -32,6 +50,7 @@ class SistemaBancario:
         for conta in self.contas:
             if conta.numero_da_conta == numero_conta and conta.senha == senha:
                 print('Acesso permitido!')
+                self.menu_conta(conta)
                 return
         print('Número da conta ou senha incorretos.')
 
@@ -87,6 +106,46 @@ class SistemaBancario:
 
         print('Fim da Operação! Volte sempre')
 
+    def Menu_minha_conta(self):
+        print('''[1] Ver Saldo
+[2] Sacar
+[3] Depositar
+[4] ver Informações do Cliente
+[5] alterar Senha
+[6] Sair ''')
+    
+    def menu_conta(self, conta):
+        opcao = 2
+        while opcao != 6:
+            self.Menu_minha_conta()
+            opcao = int(input('Escolha a opção: '))
+
+            if opcao == 1:
+                conta.ver_saldo()
+
+            elif opcao == 2:
+                valor = float(input('Digite o valor à ser sacado: ' ))
+                conta.sacar(valor)
+
+            elif opcao == 3:
+                valor = float(input('Digite o valor à ser deposita: '))
+                conta.depositar(valor)
+
+            elif opcao == 4:
+                self.ver_informacoes()
+
+            elif opcao == 5:
+                self.alterar_senha
+                
+            elif opcao == 6:    
+                print('Finalizando...')
+            else:
+                print('Opção inválida. Tente novamente')
+            print('=-=' * 10)
+
 if __name__ == "__main__":
     sistema_bancario = SistemaBancario()
     sistema_bancario.main()
+
+    print('Fim da Operação! Volte sempre')
+
