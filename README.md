@@ -1,4 +1,10 @@
- <img src="css/source/mypy light.svg" alt="mypy logo" width="300px"/>
+  <div class="topic p-responsive container-lg">
+    <div class="d-md-flex gutter-md">
+      <div class="col-md-8 col-lg-9" data-hpc>
+          <div class="border rounded color-shadow-small color-bg-default p-4 mb-5">
+    <div class="float-sm-right ml-sm-4 mb-4 text-center">
+      <img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/python/python.png" width="100" height="100" alt="python logo">
+    </div>
  
 Mypy: Static Typing for Python
 =======================================
