@@ -37,7 +37,7 @@ class SistemaBancario:
 
     def remover_conta(self):
         numero_conta = int(input('Digite o número da conta a ser removida: '))
-        for i, conta in enumerate(self.contas):1
+        for i, conta in enumerate(self.contas):
         
             if conta.numero_da_conta == numero_conta:
                 del self.contas[i]
