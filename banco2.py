@@ -12,7 +12,7 @@ class Conta:
         return f"Nome: {self.nome}, Sexo: {self.sexo}, CPF: {self.cpf}, Idade: {self.idade}, Número da Conta: {self.numero_da_conta}"
     
     def ver_saldo(self):
-        print("Saldo: ", self.saldo)
+        print("Saldo: R$ ", self.saldo)
 
     def sacar(self, valor):
         if self.saldo >= valor:
@@ -128,7 +128,7 @@ class SistemaBancario:
                 conta.sacar(valor)
 
             elif opcao == 3:
-                valor = float(input('Digite o valor à ser deposita: '))
+                valor = float(input('Digite o valor à ser depositado: '))
                 conta.depositar(valor)
 
             elif opcao == 4:
