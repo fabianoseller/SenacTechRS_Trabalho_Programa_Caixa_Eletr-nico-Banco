@@ -1,59 +1,180 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Validação de Entrada, Tratamento de Erros e Melhoria na Exibição da Conta</title>
-    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background: #cccfc9;
+        }
+
+        code {
+            background-color: #f4f4f4;
+            padding: 5px;
+        }
+    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <h1>Validação de Entrada, Tratamento de Erros e Melhoria na Exibição da Conta</h1>
 
     <h2>Validação de Entrada:</h2>
-    <p>Iportante verificar se o CPF possui 11 dígitos, se a senha atende aos critérios de segurança, entre outros. Criar funções específicas que verificam cada campo de entrada e retornam "True" se estiverem corretos e False caso contrário.</p>
+    <p>Iportante verificar se o CPF possui 11 dígitos, se a senha atende aos critérios de segurança, entre outros. Criar
+        funções específicas que verificam cada campo de entrada e retornam "True" se estiverem corretos e False caso
+        contrário.</p>
 
     <h2>Tratamento de Erros:</h2>
-    <p>O tratamento de erros: blocos try-except para capturar possíveis exceções e fornecer uma mensagem adequada ao usuário, indicando o problema ocorrido e instruindo sobre a entrada correta.</p>
+    <p>O tratamento de erros: blocos try-except para capturar possíveis exceções e fornecer uma mensagem adequada ao
+        usuário, indicando o problema ocorrido e instruindo sobre a entrada correta.</p>
 
     <h2>Melhoria na Exibição da Conta:</h2>
-    <p>Além de utilizar o método __str__ para imprimir os dados da conta, é recomendável criar um método separado para exibir os detalhes da conta de maneira mais amigável ao usuário. Por exemplo, podemos criar o método exibir_detalhes_conta, que formata os dados da conta de forma organizada e fácil de entender, proporcionando uma melhor experiência ao usuário.</p>
+    <p>Além de utilizar o método __str__ para imprimir os dados da conta, é recomendável criar um método separado para
+        exibir os detalhes da conta de maneira mais amigável ao usuário. Por exemplo, podemos criar o método
+        exibir_detalhes_conta, que formata os dados da conta de forma organizada e fácil de entender, proporcionando uma
+        melhor experiência ao usuário.</p>
 
-    <p>No código aqui, def é uma palavra-chave em Python que define funções. Quando você escreve def nome_da_funcao(parametros):, você está criando uma função em Python. def: É a palavra-chave que indica que estamos definindo uma função.
-        criar_conta: É o nome da função que estamos criando.         (self): Indica que a função pertence à classe em que está definida. self é uma convenção em Python para referenciar a própria instância da classe.
+    <p>No código aqui, def é uma palavra-chave em Python que define funções. Quando você escreve def
+        nome_da_funcao(parametros):, você está criando uma função em Python. def: É a palavra-chave que indica que
+        estamos definindo uma função.
+        criar_conta: É o nome da função que estamos criando. (self): Indica que a função pertence à classe em que está
+        definida. self é uma convenção em Python para referenciar a própria instância da classe.
         :: Marca o final do cabeçalho da função e o início do bloco de código que define a função.
-        O bloco de código dentro da função é executado quando a função é chamada. Neste caso, a função solicita ao usuário que insira os dados para criar uma nova conta bancária, cria um objeto Conta com esses dados e o adiciona à lista de contas (self.contas).
-        A função não retorna explicitamente nenhum valor, mas realiza a ação de criar uma conta e adicioná-la à lista de contas do sistema bancário.</p>
-
-
- 
-
-
-        Este código implementa um sistema bancário básico com a capacidade de criar contas, acessar contas existentes, remover contas e exibir detalhes das contas. Além disso, ele inclui a funcionalidade de salvar os dados das contas em um arquivo JSON e carregar esses dados de um arquivo JSON quando o programa é iniciado.
-
-        <p>
-            Detalhes: 
-Classe Conta:
-
-Esta classe representa uma conta bancária.
-Ela possui atributos como nome, sexo, CPF, idade, número da conta e senha.
-O método __str__ é definido para retornar uma representação em string da conta.
-O método to_json() converte os dados da conta em um formato que pode ser serializado em JSON.
-
-Classe SistemaBancario:
-Esta classe representa o sistema bancário.
-Ela mantém uma lista de contas bancárias.
-O método carregar_contas() verifica se um arquivo JSON de contas existe. Se existir, ele carrega os dados das contas do arquivo e as adiciona à lista de contas.
-Se o arquivo não existir, uma mensagem é exibida informando que um novo arquivo será criado.
-O método criar_conta() solicita ao usuário que insira os dados para criar uma nova conta e a adiciona à lista de contas.
-O método acessar_conta() permite que o usuário acesse uma conta existente, fornecendo o número da conta e a senha.
-O método remover_conta() permite que o usuário remova uma conta existente, fornecendo o número da conta.
-O método exibir_detalhes_conta() permite que o usuário veja os detalhes de uma conta existente, fornecendo o número da conta.
-O método salvar_contas_json() salva os dados das contas em um arquivo JSON.
-O método menu() exibe um menu com as opções disponíveis no sistema.
-O método main() é o ponto de entrada do programa, onde o usuário interage com o sistema selecionando opções do menu.
-if __name__ == "__main__": </p>
+        O bloco de código dentro da função é executado quando a função é chamada. Neste caso, a função solicita ao
+        usuário que insira os dados para criar uma nova conta bancária, cria um objeto Conta com esses dados e o
+        adiciona à lista de contas (self.contas).
+        A função não retorna explicitamente nenhum valor, mas realiza a ação de criar uma conta e adicioná-la à lista de
+        contas do sistema bancário.</p>
 
 
 
+
+
+    Este código implementa um sistema bancário básico com a capacidade de criar contas, acessar contas existentes,
+    remover contas e exibir detalhes das contas. Além disso, ele inclui a funcionalidade de salvar os dados das contas
+    em um arquivo JSON e carregar esses dados de um arquivo JSON quando o programa é iniciado.
+
+    <p>
+        Detalhes:
+        Classe Conta:
+
+        Esta classe representa uma conta bancária.
+        Ela possui atributos como nome, sexo, CPF, idade, número da conta e senha.
+        O método __str__ é definido para retornar uma representação em string da conta.
+        O método to_json() converte os dados da conta em um formato que pode ser serializado em JSON.
+
+        Classe SistemaBancario:
+        Esta classe representa o sistema bancário.
+        Ela mantém uma lista de contas bancárias.
+        O método carregar_contas() verifica se um arquivo JSON de contas existe. Se existir, ele carrega os dados das
+        contas do arquivo e as adiciona à lista de contas.
+        Se o arquivo não existir, uma mensagem é exibida informando que um novo arquivo será criado.
+        O método criar_conta() solicita ao usuário que insira os dados para criar uma nova conta e a adiciona à lista de
+        contas.
+        O método acessar_conta() permite que o usuário acesse uma conta existente, fornecendo o número da conta e a
+        senha.
+        O método remover_conta() permite que o usuário remova uma conta existente, fornecendo o número da conta.
+        O método exibir_detalhes_conta() permite que o usuário veja os detalhes de uma conta existente, fornecendo o
+        número da conta.
+        O método salvar_contas_json() salva os dados das contas em um arquivo JSON.
+        O método menu() exibe um menu com as opções disponíveis no sistema.
+        O método main() é o ponto de entrada do programa, onde o usuário interage com o sistema selecionando opções do
+        menu.
+        if __name__ == "__main__": </p>
+
+    <h1>Funções do Sistema Bancário</h1>
+    <table>
+        <tr>
+            <th>Função</th>
+            <th>Descrição</th>
+        </tr>
+        <tr>
+            <td>Conta.__init__</td>
+            <td>Inicializa um objeto de conta com informações como nome, sexo, CPF, idade, número da conta, senha e
+                saldo (opcionalmente).</td>
+        </tr>
+        <tr>
+            <td>Conta.__str__</td>
+            <td>Retorna uma representação em string do objeto de conta, exibindo informações como nome, sexo, CPF, idade
+                e número da conta.</td>
+        </tr>
+        <tr>
+            <td>Conta.ver_saldo</td>
+            <td>Exibe o saldo atual da conta.</td>
+        </tr>
+        <tr>
+            <td>Conta.sacar</td>
+            <td>Realiza uma operação de saque na conta, deduzindo o valor especificado do saldo se houver fundos
+                suficientes.</td>
+        </tr>
+        <tr>
+            <td>Conta.depositar</td>
+            <td>Realiza uma operação de depósito na conta, adicionando o valor especificado ao saldo atual.</td>
+        </tr>
+        <tr>
+            <td>Conta.alterar_senha</td>
+            <td>Altera a senha da conta se a senha atual fornecida corresponder à senha atual da conta.</td>
+        </tr>
+        <tr>
+            <td>SistemaBancario.__init__</td>
+            <td>Inicializa um objeto de sistema bancário, criando uma lista vazia de contas.</td>
+        </tr>
+        <tr>
+            <td>SistemaBancario.carregar_contas_do_json</td>
+            <td>Carrega as informações das contas do arquivo JSON "contas.json" e as armazena em objetos de conta na
+                lista de contas do sistema bancário.</td>
+        </tr>
+        <tr>
+            <td>SistemaBancario.criar_conta</td>
+            <td>Cria uma nova conta solicitando informações como nome, sexo, idade, CPF, número da conta e senha, e
+                armazena a conta na lista de contas do sistema bancário.</td>
+        </tr>
+        <tr>
+            <td>SistemaBancario.salvar_contas_em_json</td>
+            <td>Salva as informações das contas no arquivo JSON "contas.json".</td>
+        </tr>
+        <tr>
+            <td>SistemaBancario.acessar_conta</td>
+            <td>Solicita o número da conta e a senha, verifica se correspondem a uma conta existente e permite o acesso
+                à conta, exibindo um menu de operações de conta.</td>
+        </tr>
+        <tr>
+            <td>SistemaBancario.remover_conta</td>
+            <td>Remove uma conta da lista de contas do sistema bancário, solicitando o número da conta e verificando se
+                ela existe.</td>
+        </tr>
+        <tr>
+            <td>SistemaBancario.exibir_detalhes_conta</td>
+            <td>Solicita o número da conta e exibe os detalhes da conta se ela existir na lista de contas do sistema
+                bancário.</td>
+        </tr>
+        <tr>
+            <td>SistemaBancario.exibir_todas_contas</td>
+            <td>Exibe todos os detalhes das contas na lista de contas do sistema bancário.</td>
+        </tr>
+        <tr>
+            <td>SistemaBancario.menu</td>
+            <td>Exibe um menu de opções para interação com o sistema bancário, como criar conta, acessar conta, remover
+                conta,</td>
+        </tr>
+        <tr>
+            <td>SistemaBancario.main</td>
+            <td>Ponto de entrada do programa, onde o usuário interage com o sistema selecionando opções do menu.</td>
+        </tr>
+        <tr>
+            <td>SistemaBancario.Menu_minha_conta</td>
+            <td>Menu para interação com uma conta específica.</td>
+        </tr>
+        <tr>
+            <td>SistemaBancario.menu_conta</td>
+            <td>Menu para interação com uma conta específica.</td>
+        </tr>
+    </table>
 </body>
+
 </html>
