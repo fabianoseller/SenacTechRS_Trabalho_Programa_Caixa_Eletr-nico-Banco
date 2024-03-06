@@ -1,3 +1,4 @@
+# Dados do Usuário
 class Conta:
     def __init__(self, nome, sexo, cpf, idade, numero_da_conta, senha):
         self.nome = nome
@@ -8,7 +9,7 @@ class Conta:
         self.senha = senha
         self.saldo = 0
 
-
+# Lógica da Opção 2 Acesar Conta
     def __str__(self):
         return f"Nome: {self.nome}, Sexo: {self.sexo}, CPF: {self.cpf}, Idade: {self.idade}, Número da Conta: {self.numero_da_conta}"
     
@@ -36,7 +37,7 @@ class Conta:
         else:
             print("Senhas não correspondem")
         
-
+# Classe do Menu Principal, com as funções.
 class SistemaBancario:
     def __init__(self):
         self.contas = []
@@ -82,6 +83,7 @@ class SistemaBancario:
                 return
         print('Conta não encontrada.')
 
+#Função lógica do menu principal
     def menu(self):
         print('''[1] Criar Conta
 [2] Acessar Conta
@@ -115,6 +117,7 @@ class SistemaBancario:
 
         print('Fim da Operação! Volte sempre')
 
+#Função lógica do menu minha conta
     def Menu_minha_conta(self):
         print('''[1] Ver Saldo
 [2] Sacar
