@@ -8,6 +8,7 @@ class Conta:
         self.senha = senha
         self.saldo = 0
 
+
     def __str__(self):
         return f"Nome: {self.nome}, Sexo: {self.sexo}, CPF: {self.cpf}, Idade: {self.idade}, Número da Conta: {self.numero_da_conta}"
     
@@ -26,7 +27,15 @@ class Conta:
            self.saldo += valor
            print('Deposito concluido com sucesso! ')    
         else:
-            print('Erro na operação')    
+            print('Erro na operação')  
+
+    def alterar_senha(self, senha_antiga, senha_nova):
+        if self.senha == senha_antiga:
+            self.senha = senha_nova
+            print("Senha alterada com Sucesso! ")
+        else:
+            print("Senhas não correspondem")
+        
 
 class SistemaBancario:
     def __init__(self):
@@ -135,7 +144,9 @@ class SistemaBancario:
                 self.ver_informacoes()
 
             elif opcao == 5:
-                self.alterar_senha
+                senha_antiga = input('Digite sua senha atual: ')
+                senha_nova = input('Digite sua senha nova: ')
+                conta.alterar_senha(senha_antiga, senha_nova)
                 
             elif opcao == 6:    
                 print('Finalizando...')
